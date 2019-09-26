@@ -1,7 +1,6 @@
 // ==============================================================================
 // DEPENDENCIES
 // Series of npm packages that we will use to give our server useful functionality
-// For the most part we can copy and paste this files as we go (boiler plate)
 // ==============================================================================
 
 var express = require("express");
@@ -25,11 +24,10 @@ app.use(express.json());
 // ROUTER
 // The below points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs.
-// Giving our routes access to express (our servers)
 // ================================================================================
 
-require("./app/routes/apiRoutes")(app);
-require("./app/routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 // =============================================================================
 // LISTENER
