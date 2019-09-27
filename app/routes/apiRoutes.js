@@ -16,8 +16,11 @@ module.exports = function(app){
     // Below code handles when a user submits a form and thus submits data to the server.
     app.post('/api/friends',function(req,res){
         var newFriend = req.body;
-        //logic to add friend
-        //logic to match friend
+        //go through the user's data via loop
+        //find the best match by comparing again each friend in db
+        //user another loop to comare the values
+        //calculate the difference in values
+        //push new friend into friends array
         friends.push(newFriend);
         res.json(friends[index]);
     });
